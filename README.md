@@ -1,5 +1,8 @@
 # parse_bychar
-State machine approach to parsing well-formed XML (and adding missing bits along the way)
+State machine approach to parsing well-formed XML (and adding missing bits along the way). Working example of this 
+utility:
+
+http://learningbywrote.com/demo/read_bychar.php
 
 The SGML standard has an appendix describing the distinction between structure-controlled applications and markup-sensitive applications. The principles apply for XML as well as SGML applications. The key chapter is available as a public recommendation for a revision; the particular material is under the heading, [Attachment 1: The ISO 8879 Element Structure Information Set (ESIS)](http://www.sgmlsource.com/8879/n1035.htm). This attachment does not describe a syntax for this information set; there is a useable one created by James Clark for his original NSGMLS parser: [NSGMLS: An SGML System Conforming to International Standard ISO 8879](http://www.jclark.com/sp/sgmlsout.htm).
 
