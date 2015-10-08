@@ -21,3 +21,8 @@ This web application is a PHP parser that uses a finite state machine approach t
     *   <tt>[?infile=http://www.sgmlsource.com/8879/n1035.htm](http://learningbywrote.com/demo/read_bychar.php?infile=http://www.sgmlsource.com/8879/n1035.htm)</tt> (has known unclosed definition terms and other atrocious HTML in it)
     *   <tt>[?infile=http://www.jclark.com/sp/sgmlsout.htm](http://learningbywrote.com/demo/read_bychar.php?infile=http://www.jclark.com/sp/sgmlsout.htm)</tt> (also has unclosed definition terms)
     *   <tt>[?infile=](http://learningbywrote.com/demo/read_bychar.php?infile=)</tt>
+
+## Updates:
+
+1. parse_bychar..php loads the function parse_bychar() which takes $file and $lang as parameters
+2. test_parse.php is a trial application of this interface. It natively loads "time.xml" as lang=xml and returns a string. It further converts that string into an array and dumps it for review. This array is what we need as input to subsequent processing--each line represents a token in the parsed stream. The scope of an element is from ( to ); from here we can construct whatever data structure is easiest to manipulate (ie, nested array, JSON, simpleXML object, DOM object, etc.).
